@@ -1,0 +1,38 @@
+\documentclass[notes,compress,serif,professionalfont]{beamer}
+\usetheme{boxes} %Boadilla, Berkeley, Dresden, Rochester, Pittsburgh
+\useoutertheme{miniframes} %split, shadow, infolines, default
+\usepackage{hyperref}
+\usepackage{pxfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{subfigure}
+\usetikzlibrary{arrows,shapes}
+\beamertemplateballitem % make bullets and items fancy balls
+\useheadtemplate{%
+\vbox{%
+\vskip1pt%
+\beamerline{\insertnavigation{\paperwidth}}%
+\vskip-5pt
+}
+}
+%\renewcommand{\frametitle}[1]{\begin{center}\textbf{#1}\end{center}}
+
+\begin{document}
+\title{Title}
+\author{Harry J.~Paarsch}
+\date{xx June 2024}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\input{Topic.tex}
+
+\input{Data-Appendix.tex}
+
+\end{document}

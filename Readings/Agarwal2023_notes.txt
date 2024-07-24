@@ -1,0 +1,21 @@
+Sumit Agarwal, Andrea Presbitero, Andre F. Silva, Carlo Wix (2023). "Who pays for your rewards? Redistribution in the Credit Card Market," Finance and Economics Discussion Series 2023-007. Washington Board of Governorns of the Federal Reserve System.
+
+Read: May 2024
+
+Regardless of income, sophisticated individuals profit from reward credit cards at the expense of naive consumers.
+Estimated aggregate annual redistribution of $15 billion from less to more educated, poorer to richer, and high to low minority areas, widening existing disparities.
+
+sub-prime: < 660
+near-prime: 660-720
+prime: 720-780
+super-prime: >780
+
+Super-prime cardholders earn on average \$9.5 per month on reward carsds. High-income super-prime benefit the most: \$20.1 in net rewards per month, relative to classic credit cards, at the expense of HIGH-INCOME (not low) consumers with low FICO scores.
+
+FICO Scores correlate with financial sophistication, not income.
+
+For sub-prime holders, bank's revenue is more than 60 percent from interest income, while for super-prime holders, up to 80 percent is from interchange income. 
+
+"High-FICO consumers rake in the benefits while avoiding the costs of reward credit cards and therefore profit from usage, while low-FICO consumers incur high costs due to high interest charges."
+
+"Financial Sophistication: the ability of consumers to make informed decisions and avoid mistakes in the use of financial products."

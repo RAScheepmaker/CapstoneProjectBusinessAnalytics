@@ -1,0 +1,33 @@
+\section{Conclusions} \label{sec:Conclusions}
+
+We have seen that credit cards can be very rewarding for those (financially sophisticated) people who have the discipline to pay them off in full each month.
+Due to inefficiencies in the the rewards programs, it is mostly people who use cash, or the (financially na\"{i}ve) people who use credit cards in a nonoptimal way, who are paying for the rewards of the financially sophisticated, through inflated prices, interest, and fees. 
+Also the people who use credit cards optimally, however, pay for some fraction of their rewards through the same inflated prices, that merchants most likely have raised to recoup some of the interchange fees set by the credit card networks.
+
+By developing a credit card recommendation algorithm, I have shown that people can expect an ROS of up to $\sim$6.5~percent, by putting all their spend on up to 4--6 credit cards.
+A Monte Carlo simulation showed that the mean expected ROS is $3.80\pm0.80$~percent, and 
+the ROS is higher for people who are using travel transfer partners for their points, and who make use of all the static benefits that credit cards might offer.
+These numbers assume that people are willing to put in some time and research into their personal finances, in order to estimate their yearly spending patterns and apply for those cards that best fit this spending budget. 
+To help with this, I have developed an online app that takes a user's budget and preferences into account, in order to recommend the optimal credit card portfolio.
+
+My results also show a trend of ROS increasing with income, once a threshold income of roughly \$120,000 is reached. 
+This is most likely explained by a shift in spending patterns, as people with higher incomes spend an increasing fraction of their budget on travel, which is a category that offers higher rewards, without any meaningful spending limits (caps). 
+Categories like groceries, or custom categories with elevated 5x multipliers, on the other hand, usually come with caps on the amount of rewards that can be earned, limiting the ROS on these categories for big spenders with high incomes.
+The observation that ROS increases with income seems consistent with the conclusion from \cite{agaretal:2023} that reward credit cards are widening existing disparities between the poor and the rich.
+% mention that this fits in the picture where banks stimulate overspending and affluent lifestyles? 
+
+Since this project was planned, executed, and presented in a total timespan of about 11 weeks, I had to ignore certain details, and make some reasonable assumptions. 
+For example, I have ignored foreign transaction fees, which are typically 3~percent for non-travel oriented credit cards. 
+Travel credit cards usually do not have foreign transaction fees, but this still means that frequent international travelers have to leave certain other cards from their portfolio at home, complicating the optimal portfolio.
+With 119 million merchants accepting American Express internationally, compared to 130 million accepting Visa/Mastercard \citep{thriftytraveler:2024}, the acceptance rate for American Express is still significantly lower abroad. 
+This might also complicate someone's decision to choose credit cards, and is part of the reason why I included a bank filter in the \textsf{Shiny} app. 
+
+One of the assumptions I made is that all users qualify for all the cards in the dataset, because I assumed that users are financially sophisticated, with high FICO scores, before they even want to optimize their credit card portfolio.  
+One could argue indeed that this is not very realistic, and even with a prime-plus or super-prime credit score (i.e., a FICO score above 720, see Table~\ref{tab:FICO} on page~\pageref{tab:FICO}), the income of a user might not be high enough to get approved for certain cards that come with high credit lines. 
+Banks, however, do not openly share their income and credit score requirements for their credit cards, and they probably also use other, non-disclosed, information to make approval decisions. 
+So, even if a user would be asked to provide their income and FICO score in the app, 
+an algorithm could only guess for which cards the user would be approved. 
+Due to the time constraints, I have not included such an approval estimate in my algorithm, but it is feature to consider for a future update.
+Until then, users of the app should understand that the recommended portfolio is something to aim for, even if certain cards seem currently unfeasible, based on the user's current income and credit score. 
+
+Despite all these assumptions, I hope my app delivered some utility to the reader and my fellow classmates, and that this project has led to an increased awareness, and understanding, of the economics of credit card rewards, and the benefits for their financially sophisticated users. 

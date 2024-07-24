@@ -1,0 +1,60 @@
+\documentclass[notes,compress,sanserif,professionalfont]{beamer}
+\usetheme{boxes} %Boadilla, Berkeley, Dresden, Rochester, Pittsburgh
+\useoutertheme{miniframes} %split, shadow, infolines, default
+\usepackage{hyperref}
+\usepackage{pxfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{subfigure}
+\usetikzlibrary{arrows,shapes}
+\usepackage{bbding} % for \Checkmark symbol
+\beamertemplateballitem % make bullets and items fancy balls
+\useheadtemplate{%
+\vbox{%
+\vskip1pt%
+\beamerline{\insertnavigation{\paperwidth}}%
+%\vskip-5pt   %to place frametitles closer to the navigation bar
+}
+}
+%\renewcommand{\frametitle}[1]{\begin{center}\textbf{#1}\end{center}}
+\input{../Notation.tex}
+
+% \AtBeginSection[]
+% {
+%     \begin{frame}
+%         \frametitle{Outline}
+%         \tableofcontents[currentsection]
+%     \end{frame}
+% }
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+\begin{document}
+\title{Selecting the Optimal Credit Card Portfolio}
+\subtitle{Final Presentation}
+\author{Remco A.~Scheepmaker}
+\date{10 July 2024}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\input{Slides4.tex}
+
+%\input{DataAppendix1.tex}
+
+\end{document}

@@ -1,0 +1,121 @@
+\documentclass[11pt, letterpaper]{article}
+\usepackage{amssymb,amsmath}
+\usepackage{pifont}
+\usepackage{graphicx}
+\usepackage{txfonts}
+\usepackage{natbib}
+\usepackage{rotating}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta, 
+    citecolor=MidnightBlue,
+    urlcolor=black,
+}
+% Palatino for rm and math | Helvetica for ss | Courier for tt
+\usepackage{mathpazo}       % math & rm
+\linespread{1.05}           % Palatino needs more leading (space between lines)
+\usepackage[scaled]{helvet} % ss
+\usepackage{courier}        % tt
+\normalfont
+\usepackage[T1]{fontenc}
+
+%\usepackage[top=1.25in, bottom=1.25in, outer=1.25in, inner=1.25in, heightrounded, marginparwidth=1.0in, marginparsep=0.25in]{geometry}
+\usepackage[margin=1.00in]{geometry}    % Leave a one-inch margin around all text.
+% If a conflict exists between template and instructions: follow the instructions document!
+
+\usepackage{setspace} % Needed for doublespacing
+\graphicspath{ {../Figures/} }
+\usepackage{pdflscape} % Needed for landscape table
+\usepackage{listings} % For highlighting code
+
+\interfootnotelinepenalty=10000 % Avoids footnotes to break across multiple pages
+
+% abbreviations used in this paper
+\input{../Notation.tex}
+
+\begin{document}
+\doublespacing % Your outline should be printed double-spaced on 8.5x11-inch paper. 
+
+\title{Selecting the Optimal Credit Card Portfolio\\
+%       {\large ECO 6936 -- Capstone in Business Analytics II}}
+      {\large ECO 6936}\\
+      {\large Capstone in Business Analytics II}}
+\author{Remco A.~Scheepmaker}
+\date{July 24, 2024}
+%\date{\today}
+
+\maketitle
+
+% \begin{abstract}
+% \input{Abstract.tex}
+
+% \bigskip
+% \bigskip
+
+% \noindent
+% \textbf{Keywords:} one; two; three.
+
+% \bigskip
+
+% \noindent
+% \textbf{JEL Classification Numbers:} C57, C61, C72.
+% \end{abstract}
+
+% \vfill
+% \eject
+
+\input{Introduction.tex}
+% Your outline should have the following structure: In the first section, provide a brief description of your topic, including some institutional information that will make possible an evaluation of the theoretical model you have chosen, to be presented in a later section. 
+
+\input{Literature.tex}
+% In the next section, present a summary of what other authors have written on your topic.
+
+\input{Theory.tex}
+% In the third section, present your theoretical model, pointing out the implications of the model for the business problem you are trying to solve. 
+
+\input{Empirical-Model.tex}
+% From your theoretical model, then develop an empirical specification within which you can provide a business or economic or behavioral interpretation in the fourth section. 
+
+\input{Data.tex}
+% In the fifth section, describe the sources from which you intend to draw the data necessary in training the empirical specification. 
+% This will involve a complete description of each variable you intend to use from each source as well as a listing of the formulae you intend to use in transforming these variables into measures which are germane to your project.
+
+\input{Results.tex}
+% a discussion of the economic or behavioral interpretations for the model’s parameters;
+% a description of how the parameters of the empirical model were estimated and a presentation of the results;
+% an interpretation of the empirical results in light of the economic and statistical models;
+% a discussion of the policy implications of your empirical results;
+
+\input{Conclusions.tex}
+% a concluding section in which you describe what you learned from the project and summarize your results and their policy implications;
+
+\section*{Acknowledgements}
+\input{Thanks.tex}
+
+\clearpage
+\section*{A. Data Appendix} \label{app:Data}
+\input{Data-Appendix.tex}
+
+\section*{B. Code Appendix} \label{app:Code}
+\input{Code-Appendix.tex}
+
+% ..you must document the construction of your dataset clearly and completely. This will involve providing the following:
+% (1) the correct bibliographic references, as described in section 2.1;
+% (2) a complete definition and description of all variables used;
+% (3) a complete description of the formulae used in manipulating the raw data to obtain the variables you ultimately employed;
+% (4) a summary table of descriptive statistics for the variables used in your work.
+% This sort of description should be done in a Data Appendix and presented at the end of the paper—after any acknowledgements, but before the references.
+
+\singlespacing
+
+\bibliographystyle{../chicago}
+%\bibliographystyle{plainnat}
+\bibliography{../References}
+% The final section should include the list of readings.
+% The list of readings should be single-spaced with one blank line between references, and generated using the reference management software BIBTEX. 
+
+\end{document}

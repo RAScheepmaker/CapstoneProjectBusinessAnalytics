@@ -1,0 +1,10 @@
+name: ReMMCO
+title:
+username: remcoscheepmaker
+account: remcoscheepmaker
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12280396
+bundleId: 8830118
+url: https://remcoscheepmaker.shinyapps.io/ReMMCO/
+version: 1

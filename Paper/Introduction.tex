@@ -1,0 +1,43 @@
+\section{Introduction} \label{sec:Introduction}
+% OUTLINE: 
+% Your outline should have the following structure: In the first section, provide a brief description of your topic, including some institutional information that will make possible an evaluation of the theoretical model you have chosen, to be presented in a later section. 
+
+% FINAL PAPER:
+% an introduction, where the problem is motivated and the interesting features of the analysis summarized;
+
+Credit cards are an important part of the American economy and culture.
+According to the Consumer Financial Protection Bureau \citep{cfpb:2023}, consumers spent \$3.2 trillion on purchases using credit cards in 2022. 
+Total credit card debt recently passed \$1 trillion, 82 percent of which is revolving (i.e. bearing interest, the remaining 18 percent is paid by the due date without being charged interest). 
+The combination of income from interest, interchange fees, and annual fees makes credit cards very profitable for the major banks, but they can also be profitable for a certain fraction of their users.
+A key feature of many credit cards is their rewards structure, which returns a percentage of the user's spend back to the user in the form of cash back, reward points, or miles.%
+\footnote{I consider points and miles to be the same for this project. Both can generally be redeemed for cash, statement credit, or used to book travel, either by transfering to loyalty programs of travel partners, or by booking flights and hotels directly through the bank's own travel portal.}
+Credit card rewards programs are designed by banks to attract new customers and improve their loyalty, as well as to increase income through interchange fees and interest by stimulating (over)spending.
+The CFPB estimates that the total dollar value of the rewards earned in 2022 exceeded \$40 billion, and the average rewards-earning account redeemed \$167.%
+\footnote{According to Experian, the average American has 3.9 credit card accounts (\url{https://www.experian.com/blogs/ask-experian/average-number-of-credit-cards-a-person-has/}, accessed June 1, 2024).} 
+These ``earnings'' are much less than the \$130 billion charged to consumers in interest and fees, making credit cards such a profitable enterprise for banks. 
+
+As we will see in more detail in the next section, credit card rewards work partially through what is called the ``reverse Robin Hood'' mechanism, since to some extend it is the poor who, by paying interest and fees, subsidize the rewards of the rich \citep{wsj:2010}.
+%\footnote{\url{https://www.wsj.com/articles/BL-REB-11033}}
+More accurately, it is primarily the financially na\"{i}ve who are sponsoring the financially sophisticated, where the level of sophistication seems best measured by credit scores from the Fair Isaac Corporation (FICO), as opposed to income \citep*{agaretal:2023}.
+%(Agarwal, Presbitero, Silva, and Wix, \citeyear{agaretal:2023}).
+For those interested in travel using credit card points, or just saving some money through cashback rewards, it is therefore crucial to learn good financial habits and eventually become part of the financially sophisticated demographic with high FICO scores. 
+
+Once credit card rewards are a net benefit (meaning the value of the rewards are higher than the costs of fees and interest), it might be worthwile to explore how we can optimize one's choice of credit cards to maximize this benefit. Which credit cards should different consumers select, and is there an optimal number before the marginal benefit of adding more cards becomes too small?  
+These are the topics I study in this project. 
+My personal credit card portfolio has expanded from two to eleven credit cards over the last five years, increasing my net benefit from less than two to about five percent of my entire annual spend.
+The analysis that I applied to my own spending budget, in order to optimize my own credit card portfolio, inspired me to create an optimization algorithm that can be applied at scale to a larger selection of credit cards, and to different types of consumers. 
+In this paper I present this algorithm, code it in \sR, and use it to model ``optimal'' portfolios of rewards credit cards for various combinations of user preferences and spending characteristics. 
+I then study the properties of these modeled portfolios by combining data from the Bureau of Labor Statistics (BLS) on income and spending with data on credit card reward multipliers and values. 
+By performing a sensitivity analysis, I find that spending on four to six credit cards is the sweet spot for most people, before the marginal benefit of adding more cards to the portfolio drops below \$50. 
+From a Monte Carlo simulation I find that the average return on spend (ROS) is 3.8~percent, with a standard deviation of 0.8~percent. 
+In terms of ROS, the benefit of using credit cards can be significantly higher (up to $\sim$6.5~percent) for people who do not spend a lot but make full use of static benefits, such as travel credits and airport lounge access, or for people who spend above average on travel, since the travel categories have the highest (uncapped) point multipliers. 
+Finally, I present a \textsf{Shiny} app that I developed in \sR, to serve as an online tool that people can use to get a recommended credit card portfolio, based on their personal preferences and spending budget.
+This app can benefit many sophisticated credit card users who would like to stretch their budgets, travel more, or who simply enjoy optimizing their personal finances.
+
+The structure of this paper is as follows. 
+In Sect.~\ref{sec:Literature}, I first discuss some literature and background on credit scores and the payment structure of rewards programs. 
+In Sect.~\ref{sec:Theory}, the theoretical model that will form the basis of my optimization algorithm is presented. 
+In Sect.~\ref{sec:Specification}, the theory is broken down into an empirical specification that depends on variables and parameters that will need to come from data.
+In Sect.~\ref{sec:Data}, the sources for these data are described. 
+In Sect.~\ref{sec:Results}, I present the results, which includes the sensitivity analysis and Monte Carlo modeling, as well as a description of the \sR\ \textsf{Shiny} app that has also been deployed online. 
+Finally, the conclusions are discussed in Sect.~\ref{sec:Conclusions}, and the appendices are reserved for some tables that show additional details of the data, as well as the code that makes up the recommendation algorithm.

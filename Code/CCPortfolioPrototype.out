@@ -1,0 +1,163 @@
+[1] "The optimal portfolio with a total benefit of $1289.99 is:"
+[1] "Double Cash"          "Blue Cash Preferred"  "Custom Cash Dining"  
+[4] "Amazon Prime"         "Autograph"            "Customized Cash Home"
+[7] "Freedom Unlimited"    "Savor One"            "Blue Cash Everyday"  
+[1] "The marginal benefits are:"
+[1] 771.58 213.38 126.66 100.26  28.91  26.06  14.81   8.33   0.00
+[1] "The total spend is: $38579"
+[1] "The return on spend is: 3.34%"
+[1] "Use the following card assignments:"
+       everything_else              groceries                 dining 
+         "Double Cash"  "Blue Cash Preferred"   "Custom Cash Dining" 
+                   gas                utility       home_improvement 
+ "Blue Cash Preferred"          "Double Cash" "Customized Cash Home" 
+       online_shopping             drug_store           travel_other 
+        "Amazon Prime"    "Freedom Unlimited"            "Autograph" 
+                 phone              streaming       department_store 
+           "Autograph"  "Blue Cash Preferred"          "Double Cash" 
+         entertainment         cable_internet           hotel_portal 
+           "Savor One"          "Double Cash"         "Amazon Prime" 
+        airline_portal             car_portal        office_supplies 
+        "Amazon Prime"         "Amazon Prime"          "Double Cash" 
+pdf 
+  2 
+[1] "The optimal portfolio with a total benefit of $1486.11 is:"
+[1] "Sapphire Preferred"  "Blue Cash Preferred" "Custom Cash Home"   
+[4] "Amazon Prime"        "Autograph"           "Venture"            
+[7] "Altitude Go"         "Freedom Unlimited"   "Savor One"          
+[1] "The marginal benefits are:"
+[1] 1030.77852  222.02300   80.13450   57.84075   49.51575   31.37400    7.50000
+[8]    4.44300    2.49900
+[1] "The total spend is: $38579"
+[1] "The return on spend is: 3.85%"
+[1] "Use the following card assignments:"
+      everything_else             groceries                dining 
+            "Venture" "Blue Cash Preferred"  "Sapphire Preferred" 
+                  gas               utility      home_improvement 
+          "Autograph"             "Venture"    "Custom Cash Home" 
+      online_shopping            drug_store          travel_other 
+       "Amazon Prime"   "Freedom Unlimited"  "Sapphire Preferred" 
+                phone             streaming      department_store 
+          "Autograph" "Blue Cash Preferred"             "Venture" 
+        entertainment        cable_internet          hotel_portal 
+          "Savor One"             "Venture"  "Sapphire Preferred" 
+       airline_portal            car_portal       office_supplies 
+ "Sapphire Preferred"  "Sapphire Preferred"             "Venture" 
+pdf 
+  2 
+[1] "The optimal portfolio with a total benefit of $2468.70 is:"
+[1] "Venture X"          "Gold"               "Platinum"          
+[4] "Autograph"          "Custom Cash Home"   "Amazon Prime"      
+[7] "Altitude Go"        "Sapphire Preferred" "Premium Rewards"   
+[1] "The marginal benefits are:"
+[1] 1539.427  414.824  353.745   61.281   41.696   30.096   15.000    7.635
+[9]    5.000
+[1] "The total spend is: $38579"
+[1] "The return on spend is: 6.40%"
+[1] "Use the following card assignments:"
+     everything_else            groceries               dining 
+         "Venture X"               "Gold" "Sapphire Preferred" 
+                 gas              utility     home_improvement 
+         "Autograph"          "Venture X"   "Custom Cash Home" 
+     online_shopping           drug_store         travel_other 
+      "Amazon Prime"          "Venture X"           "Platinum" 
+               phone            streaming     department_store 
+         "Autograph" "Sapphire Preferred"          "Venture X" 
+       entertainment       cable_internet         hotel_portal 
+         "Venture X"          "Venture X"          "Venture X" 
+      airline_portal           car_portal      office_supplies 
+"Sapphire Preferred"          "Venture X"          "Venture X" 
+pdf 
+  2 
+pdf 
+  2 
+pdf 
+  2 
+pdf 
+  2 
+pdf 
+  2 
+pdf 
+  2 
+pdf 
+  2 
+pdf 
+  2 
+pdf 
+  2 
+pdf 
+  2 
+pdf 
+  2 
+[1] "The optimal portfolio with a total benefit of $1289.99 is:"
+[1] "Double Cash"          "Blue Cash Preferred"  "Custom Cash Dining"  
+[4] "Amazon Prime"         "Autograph"            "Customized Cash Home"
+[7] "Freedom Unlimited"    "Savor One"           
+[1] "The marginal benefits are:"
+[1] 771.58 213.38 126.66 100.26  28.91  26.06  14.81   8.33
+[1] "The total spend is: $38579"
+[1] "The return on spend is: 3.34%"
+[1] "Use the following card assignments:"
+       everything_else              groceries                 dining 
+         "Double Cash"  "Blue Cash Preferred"   "Custom Cash Dining" 
+                   gas                utility       home_improvement 
+ "Blue Cash Preferred"          "Double Cash" "Customized Cash Home" 
+       online_shopping             drug_store           travel_other 
+        "Amazon Prime"    "Freedom Unlimited"            "Autograph" 
+                 phone              streaming       department_store 
+           "Autograph"  "Blue Cash Preferred"          "Double Cash" 
+         entertainment         cable_internet           hotel_portal 
+           "Savor One"          "Double Cash"         "Amazon Prime" 
+        airline_portal             car_portal        office_supplies 
+        "Amazon Prime"         "Amazon Prime"          "Double Cash" 
+pdf 
+  2 
+[1] "The optimal portfolio with a total benefit of $1483.61 is:"
+[1] "Sapphire Preferred"  "Blue Cash Preferred" "Custom Cash Home"   
+[4] "Amazon Prime"        "Autograph"           "Venture"            
+[7] "Altitude Go"         "Freedom Unlimited"  
+[1] "The marginal benefits are:"
+[1] 1030.77852  222.02300   80.13450   57.84075   49.51575   31.37400    7.50000
+[8]    4.44300
+[1] "The total spend is: $38579"
+[1] "The return on spend is: 3.85%"
+[1] "Use the following card assignments:"
+      everything_else             groceries                dining 
+            "Venture" "Blue Cash Preferred"  "Sapphire Preferred" 
+                  gas               utility      home_improvement 
+          "Autograph"             "Venture"    "Custom Cash Home" 
+      online_shopping            drug_store          travel_other 
+       "Amazon Prime"   "Freedom Unlimited"  "Sapphire Preferred" 
+                phone             streaming      department_store 
+          "Autograph" "Blue Cash Preferred"             "Venture" 
+        entertainment        cable_internet          hotel_portal 
+            "Venture"             "Venture"  "Sapphire Preferred" 
+       airline_portal            car_portal       office_supplies 
+ "Sapphire Preferred"  "Sapphire Preferred"             "Venture" 
+pdf 
+  2 
+[1] "The optimal portfolio with a total benefit of $2463.70 is:"
+[1] "Venture X"          "Gold"               "Platinum"          
+[4] "Autograph"          "Custom Cash Home"   "Amazon Prime"      
+[7] "Altitude Go"        "Sapphire Preferred"
+[1] "The marginal benefits are:"
+[1] 1539.427  414.824  353.745   61.281   41.696   30.096   15.000    7.635
+[1] "The total spend is: $38579"
+[1] "The return on spend is: 6.39%"
+[1] "Use the following card assignments:"
+     everything_else            groceries               dining 
+         "Venture X"               "Gold" "Sapphire Preferred" 
+                 gas              utility     home_improvement 
+         "Autograph"          "Venture X"   "Custom Cash Home" 
+     online_shopping           drug_store         travel_other 
+      "Amazon Prime"          "Venture X"           "Platinum" 
+               phone            streaming     department_store 
+         "Autograph" "Sapphire Preferred"          "Venture X" 
+       entertainment       cable_internet         hotel_portal 
+         "Venture X"          "Venture X"          "Venture X" 
+      airline_portal           car_portal      office_supplies 
+"Sapphire Preferred"          "Venture X"          "Venture X" 
+pdf 
+  2 
+pdf 
+  2 

@@ -1,0 +1,24 @@
+\section{Empirical Specification} \label{sec:Specification}
+% From your theoretical model, then develop an empirical specification within which you can provide a business or economic or behavioral interpretation in the fourth section. 
+
+The theoretical model described in Sect.~\ref{sec:Theory} can be broken down into the following empirical specification. For every credit card $k$ we have for the value earned per spending category $c$:
+%
+\begin{equation}
+    y_{kc} = x_{kc}\/m_{kc} \left[ \eta\/ v_{t,k} + 
+    (1 - \eta)\/ v_{b,k}\right],
+\end{equation}
+%
+where $x_{kc}$ is the spend on card $k$ in category $c$, $m_{kc}$ is the card multiplier for that category, $v_{t,k}$ and $v_{b,k}$ are the card's highest and lowest point redemption values, and $\eta$ quantifies which fraction of the points are used for the higher-valued travel redemptions (a user-specific variable). The total value from spending is simply found by summing over the $C$ possible categories:
+%
+\begin{equation}
+    s_{k} = \sum_{c=1}^{C}y_{kc}.
+\end{equation}
+%
+For the total benefit we add the static benefits $b_{k}$ multiplied with the fraction of their use $\theta$, subtract the annual fees $f_{k}$, and sum over all the $K$ cards in our portfolio:
+%
+\begin{equation} \label{eq:specification}
+    Y(\mathbf{X}, K, \eta, \theta | \mathbf{M}, \mathbf{v_{t}}, \mathbf{v_{b}}, \mathbf{b}, \mathbf{f} ) = \sum_{k=1}^{K}\left( s_{k} + \theta\/ b_{k} - f_{k}\right).
+\end{equation}
+%
+Here it is made explicit that the total benefit $Y$ depends on user-specific variables $\mathbf{X}$ (the budget matrix with spending per card and category), $K$ (the number of cards), $\eta$ (the fraction of travel redemptions), and $\theta$ (the fraction of benefits used), and the card-specific parameters $\mathbf{M}$ (a matrix with the multipliers per card and category), $\mathbf{v_{t}}$ (a vector with travel point values), $\mathbf{v_{b}}$ (a vector with base values), $\mathbf{b}$ (a vector with benefits), and $\mathbf{f}$ (a vector with annual fees).
+The goal of this project is to study $Y$ as a function of its variables, given the parameters.

@@ -1,0 +1,198 @@
+Codebook – Created 06/25/2024
+Dataset: ACSPUMS1Y2022
+
+Variables: 
+WGTP - Housing Unit Weight
+FINCP - Family income (past 12 months, use ADJINC to adjust FINCP to constant dollars)
+
+
+WGTP - Housing Unit Weight
+Topics: 
+Description : 
+Housing Unit Weight
+Values: 
+0 - Group quarters place holder record
+1,9999 - Integer weight of housing unit
+
+FINCP - Family income (past 12 months, use ADJINC to adjust FINCP to constant dollars)
+Topics: 
+Income (Households, Families, Individuals)
+Suggested Weight : WGTP
+Values: 
+-59999 - Loss of -$59,999 or more
+-60000 - N/A(GQ/vacant)
+0 - No family income
+-59998,-1 - Loss of $1 to -$59,998
+1,9999999 - Total family income in dollars (Components are rounded)
+
+
+
+Selected Geographies (ucgid): 
+795P200US1200500 -- Bay County PUMA; Florida
+795P200US1200901 -- Brevard County (Northwest)--Titusville PUMA; Florida
+795P200US1210308 -- Pinellas County (South Central)--St. Petersburg City (West) PUMA; Florida
+795P200US1200902 -- Brevard County (East)--Beaches & Merritt Island PUMA; Florida
+795P200US1200903 -- Brevard County (Southwest)--Melbourne & West Melbourne Cities PUMA; Florida
+795P200US1210306 -- Pinellas County (Central)--Greater Pinellas Park City PUMA; Florida
+795P200US1210307 -- Pinellas County (Southeast)--St. Petersburg City (East) PUMA; Florida
+795P200US1200904 -- Brevard County (Southeast)--Palm Bay City, Grant-Valkaria & Malabar Towns PUMA; Florida
+795P200US1210304 -- Pinellas County (Central)--Greater Largo City PUMA; Florida
+795P200US1200905 -- Brevard County (West)--Rockledge & Cocoa Cities PUMA; Florida
+795P200US1210305 -- Pinellas County (West Central)--Greater Seminole City PUMA; Florida
+795P200US1210302 -- Pinellas County (North Central) PUMA; Florida
+795P200US1210303 -- Pinellas County (Central)--Clearwater City (South & Central) PUMA; Florida
+795P200US1210301 -- Pinellas County (North) PUMA; Florida
+795P200US1207302 -- Leon County (Central)--Tallahassee City (Central) PUMA; Florida
+795P200US1203101 -- Duval County (Outer)--Jacksonville City (North & West) PUMA; Florida
+795P200US1207301 -- Leon County (Outer) PUMA; Florida
+795P200US1203103 -- Duval County (Southwest Central)--Jacksonville City (Southwest) PUMA; Florida
+795P200US1204798 -- Hamilton, Lafayette, Madison, Suwannee, & Taylor Counties PUMA; Florida
+795P200US1203102 -- Duval County (Northwest Central)--Jacksonville City (Northwest) PUMA; Florida
+795P200US1203105 -- Duval County (East)--Jacksonville City (Beaches) PUMA; Florida
+795P200US1203500 -- Flagler County PUMA; Florida
+795P200US1203104 -- Duval County (North Central)--Jacksonville City (Arlington) PUMA; Florida
+795P200US1203107 -- Duval County (South Central)--Jacksonville City (Southeast River) PUMA; Florida
+795P200US1203106 -- Duval County (Southeast)--Jacksonville City (Southeast) PUMA; Florida
+795P200US1210799 -- Putnam & St. Johns (South) Counties PUMA; Florida
+795P200US1206100 -- Indian River County PUMA; Florida
+795P200US1208609 -- Miami-Dade County (Northeast)--Hialeah City (South) PUMA; Florida
+795P200US1208608 -- Miami-Dade County (North Central)--Sweetwater City & Fontainebleau PUMA; Florida
+795P200US1208607 -- Miami-Dade County (Northeast)--Greater Hialeah City (North) PUMA; Florida
+795P200US1208606 -- Miami-Dade County (Northeast)--Opa-Locka City, West Little River & Brownsville PUMA; Florida
+795P200US1212704 -- Volusia County (Southwest Central)--Deltona & Lake Helen Cities PUMA; Florida
+795P200US1212703 -- Volusia County--Port Orange, Edgewater, New Smyrna Beach (East) & Oak Hill Cities PUMA; Florida
+795P200US1212702 -- Volusia County (Northeast)--Daytona Beach, Ormond Beach & Holly Hill Cities PUMA; Florida
+795P200US1212701 -- Volusia County (Central & Northwest)--DeLand, DeBary Cities & Pierson Town PUMA; Florida
+795P200US1211101 -- St. Lucie County (North) PUMA; Florida
+795P200US1211102 -- St. Lucie County (Southeast) PUMA; Florida
+795P200US1208612 -- Miami-Dade County (Northeast)--Miami Beach City, Surfside & Bay Harbor Islands Towns PUMA; Florida
+795P200US1209702 -- Osceola County (East) PUMA; Florida
+795P200US1208611 -- Miami-Dade County (Northeast Central)--Miami City (North) PUMA; Florida
+795P200US1209703 -- Osceola County (West)--Kissimmee PUMA; Florida
+795P200US1208610 -- Miami-Dade County (Central)--MIA, Miami Springs & Doral Cities PUMA; Florida
+795P200US1208616 -- Miami-Dade County (East)--Coral Gables City, Pinecrest Village & Kendall (South) PUMA; Florida
+795P200US1208615 -- Miami-Dade County (East Central)--Miami City (West) PUMA; Florida
+795P200US1208614 -- Miami-Dade County (East)--Miami City (South) & Key Biscayne Village PUMA; Florida
+795P200US1208613 -- Miami-Dade County (Northeast Central)--Miami City (Downtown) PUMA; Florida
+795P200US1209701 -- Osceola County (West) PUMA; Florida
+795P200US1208619 -- Miami-Dade County (Central)--Kendale Lakes (Southwest) & Kendall West (South) PUMA; Florida
+795P200US1201700 -- Citrus County PUMA; Florida
+795P200US1208618 -- Miami-Dade County (North Central)--Tamiami Trail Region (South), Tamiami PUMA; Florida
+795P200US1208617 -- Miami-Dade County (East Central)--South Miami City, Westchester & Coral Terrace PUMA; Florida
+795P200US1211503 -- Sarasota County (East) PUMA; Florida
+795P200US1211900 -- Sumter County PUMA; Florida
+795P200US1211501 -- Sarasota County (North) PUMA; Florida
+795P200US1211502 -- Sarasota County (Central & Gulf Coast) PUMA; Florida
+795P200US1211103 -- St. Lucie County (Southwest) PUMA; Florida
+795P200US1208102 -- Manatee County (West Central) PUMA; Florida
+795P200US1208101 -- Manatee County (North) PUMA; Florida
+795P200US1208623 -- Miami-Dade County (Southeast)--Cutler Bay Town & Palmetto Bay Village PUMA; Florida
+795P200US1208622 -- Miami-Dade County (Southwest)--South Miami Heights PUMA; Florida
+795P200US1205199 -- Southeast Heartland--Hendry, Highlands (South & East), Glades, & Okeechobee Counties PUMA; Florida
+795P200US1208621 -- Miami-Dade County (Central)--The Hammocks (West), Richmond West (West) & Country Walk PUMA; Florida
+795P200US1208500 -- Martin County PUMA; Florida
+795P200US1208620 -- Miami-Dade County (East Central)--Kendall (North), Sunset & Westwood Lakes PUMA; Florida
+795P200US1208103 -- Manatee County (South) PUMA; Florida
+795P200US1205998 -- Holmes, Walton, & Washington Counties PUMA; Florida
+795P200US1201398 -- Calhoun, Franklin, Gadsden, Gulf, Jackson, Jefferson, Liberty, & Wakulla Counties PUMA; Florida
+795P200US1208625 -- Miami-Dade (South/Outside Urban Development Boundary) & Monroe Counties PUMA; Florida
+795P200US1200101 -- Alachua County (Central)--Gainesville City (Central) PUMA; Florida
+795P200US1208624 -- Miami-Dade County (South)--Homestead City (North) & Florida City (North) PUMA; Florida
+795P200US1200102 -- Alachua County (Outer) PUMA; Florida
+795P200US1201115 -- Broward County (Northwest) Coral Springs City PUMA; Florida
+795P200US1201116 -- Broward County (East Central)--Wilton Manors, Fort Lauderdale (North), Oakland Park PUMA; Florida
+795P200US1201117 -- Broward County (West) Weston, Sunrise (S), Davie (W) Cities & Southwest Ranches Town PUMA; Florida
+795P200US1210902 -- St. Johns County (Northwest) PUMA; Florida
+795P200US1210903 -- St. Johns County (Northeast) PUMA; Florida
+795P200US1210504 -- Polk County (South) PUMA; Florida
+795P200US1210505 -- Polk County (North) PUMA; Florida
+795P200US1210502 -- Polk County (Northeast) PUMA; Florida
+795P200US1210503 -- Polk County (Central) PUMA; Florida
+795P200US1210104 -- Pasco County (South) PUMA; Florida
+795P200US1210501 -- Polk County (Northwest) PUMA; Florida
+795P200US1210102 -- Pasco County (West Central) PUMA; Florida
+795P200US1210103 -- Pasco County (Gulf Coast) PUMA; Florida
+795P200US1207101 -- Lee County (South & West)--Barrier Islands Region PUMA; Florida
+795P200US1207105 -- Lee County (Southeast)--Bonita Springs City & Estero (East) PUMA; Florida
+795P200US1207104 -- Lee County (Central)--Greater Fort Myers City PUMA; Florida
+795P200US1207103 -- Lee County (Northeast)--Lehigh Acres & North Fort Myers PUMA; Florida
+795P200US1207102 -- Lee County (North)--Cape Coral City (South) PUMA; Florida
+795P200US1203301 -- Escambia County (North) PUMA; Florida
+795P200US1200398 -- Baker & Nassau Counties PUMA; Florida
+795P200US1203303 -- Escambia County (Southwest) PUMA; Florida
+795P200US1203302 -- Escambia County (Southeast) PUMA; Florida
+795P200US1207106 -- Lee County (North)--Cape Coral City (North) PUMA; Florida
+795P200US1200798 -- Bradford, Columbia, Dixie, Gilchrist, Levy, & Union Counties PUMA; Florida
+795P200US1208601 -- Miami-Dade County (North Central)--Greater Miami Lakes Town PUMA; Florida
+795P200US1208605 -- Miami-Dade County--North Miami City & Miami Shores & Biscayne Park Villages PUMA; Florida
+795P200US1202102 -- Collier County (Southwest) PUMA; Florida
+795P200US1202101 -- Collier County (Northwest) PUMA; Florida
+795P200US1208604 -- Miami-Dade County (NE)--Aventura, Sunny Isles Beach, North Miami Beach (East) Cities PUMA; Florida
+795P200US1208603 -- Miami-Dade County (Northeast)--Greater North Miami Beach City (West) PUMA; Florida
+795P200US1202103 -- Collier County (East) PUMA; Florida
+795P200US1208602 -- Miami-Dade County (North Central)--Miami Gardens City PUMA; Florida
+795P200US1206903 -- Lake County (South) PUMA; Florida
+795P200US1206901 -- Lake County (Northeast) PUMA; Florida
+795P200US1206902 -- Lake County (Northwest) PUMA; Florida
+795P200US1209101 -- Okaloosa County (North) PUMA; Florida
+795P200US1211300 -- Santa Rosa County PUMA; Florida
+795P200US1209102 -- Okaloosa County (South) PUMA; Florida
+795P200US1209504 -- Orange County (South Central)--Orlando City (South Central), Conway & Pine Castle PUMA; Florida
+795P200US1205300 -- Hernando County PUMA; Florida
+795P200US1209505 -- Orange County (Central)--Orlando City (East Downtown) & Azalea Park PUMA; Florida
+795P200US1209901 -- Palm Beach County (Northeast) PUMA; Florida
+795P200US1209506 -- Orange County (Central)--Orlando City (West Downtown) & Pine Hills (Southeast) PUMA; Florida
+795P200US1209902 -- Palm Beach County (Northeast)--Palm Beach Gardens & Riviera Beach Cities PUMA; Florida
+795P200US1209507 -- Orange County (North Central)--Orlando (North), Winter Park & Maitland Cities PUMA; Florida
+795P200US1209903 -- Palm Beach County (East)--West Palm Beach City (Southeast) & Palm Beach Town PUMA; Florida
+795P200US1201101 -- Broward County (NNW)--Coral Springs (North), Parkland, & Coconut Creek (North) Cities PUMA; Florida
+795P200US1209501 -- Orange County (Northwest) PUMA; Florida
+795P200US1205701 -- Hillsborough County (Central)--Tampa City (Central) PUMA; Florida
+795P200US1201102 -- Broward County (N Central)--Margate, Coconut Creek (South), & North Lauderdale Cities PUMA; Florida
+795P200US1209502 -- Orange County (West Central)--Winter Garden, Ocoee Cities & Oakland Town PUMA; Florida
+795P200US1209503 -- Orange County (Southwest)--Disney-International Drive Region PUMA; Florida
+795P200US1201103 -- Broward County (NE)--Deerfield Beach, Pompano Beach (North) & Lighthouse Point Cities PUMA; Florida
+795P200US1202799 -- Southwest Heartland--DeSoto, Hardee, & Highlands (Northwest) Counties PUMA; Florida
+795P200US1201500 -- Charlotte County PUMA; Florida
+795P200US1205704 -- Hillsborough County (North Central) PUMA; Florida
+795P200US1209908 -- Palm Beach County (Southeast)--Boca Raton City & Highland Beach Town PUMA; Florida
+795P200US1201104 -- Broward County (NE)--Pompano Beach (South) City PUMA; Florida
+795P200US1201105 -- Broward County (West Central)--Tamarac, & North Lauderdale, & Sunrise (North) Cities PUMA; Florida
+795P200US1209909 -- Palm Beach County (West of Boca Raton City) PUMA; Florida
+795P200US1205705 -- Hillsborough County (North Central)--Tampa City (North) PUMA; Florida
+795P200US1201106 -- Broward County (West Central)--Plantation & Sunrise Cities PUMA; Florida
+795P200US1205702 -- Hillsborough County (Southwest)--Tampa City (South Central) PUMA; Florida
+795P200US1201107 -- Broward County (Central)--Lauderhill & Lauderdale Lakes Cities PUMA; Florida
+795P200US1205703 -- Hillsborough County (Northwest) PUMA; Florida
+795P200US1205708 -- Hillsborough County (Southwest) PUMA; Florida
+795P200US1209904 -- Palm Beach County (East)--Greenacres City (North) & Palm Springs Village (North) PUMA; Florida
+795P200US1209508 -- Orange County (North Central)--Orlando City (Univ. of Central Florida) & Union Park PUMA; Florida
+795P200US1201108 -- Broward County (East Central)--Fort Lauderdale City (Central) PUMA; Florida
+795P200US1201109 -- Broward County (Southeast)--Hollywood (North) & Dania Beach Cities PUMA; Florida
+795P200US1209905 -- Palm Beach County (East Central)--Lake Worth City, Lantana Town & Atlantis City PUMA; Florida
+795P200US1201901 -- Clay County (North, Central, & South) PUMA; Florida
+795P200US1209509 -- Orange County (Southeast) PUMA; Florida
+795P200US1205709 -- Hillsborough County (Southeast) PUMA; Florida
+795P200US1205706 -- Hillsborough County (Northeast) PUMA; Florida
+795P200US1209906 -- Palm Beach County (East Central)--Greater Boynton Beach City (North) PUMA; Florida
+795P200US1201902 -- Clay County (Northeast) PUMA; Florida
+795P200US1205707 -- Hillsborough County (Central) PUMA; Florida
+795P200US1209907 -- Palm Beach County (Southeast)--Greater Delray Beach City PUMA; Florida
+795P200US1211703 -- Seminole County (South Central) PUMA; Florida
+795P200US1211704 -- Seminole County (East) PUMA; Florida
+795P200US1211701 -- Seminole County (West) PUMA; Florida
+795P200US1211702 -- Seminole County (North Central) PUMA; Florida
+795P200US1210101 -- Pasco County (East Central) PUMA; Florida
+795P200US1209510 -- Orange County (Northeast) PUMA; Florida
+795P200US1209911 -- Palm Beach County (West)--Glades & Western Communities PUMA; Florida
+795P200US1208303 -- Marion County (South Central) PUMA; Florida
+795P200US1208302 -- Marion County (Central)--Ocala City PUMA; Florida
+795P200US1208301 -- Marion County (North) PUMA; Florida
+795P200US1201110 -- Broward County (Central)--Davie Town & Cooper City PUMA; Florida
+795P200US1205711 -- Hillsborough County (Central)--Progress Village, Gibsonton, Riverview PUMA; Florida
+795P200US1201111 -- Broward County (Southwest)--Pembroke Pines (West) City PUMA; Florida
+795P200US1201112 -- Broward County (SSW)--Miramar (West) & Pembroke Pines (Southwest) Cities PUMA; Florida
+795P200US1201113 -- Broward County (Southeast)--Hollywood (South) & Pembroke Pines (East) Cities PUMA; Florida
+795P200US1209910 -- Palm Beach County (Central)--Wellington Village & Agricultural Reserve PUMA; Florida
+795P200US1201114 -- Broward County (SSE)--Miramar (East), Hallandale Beach & West Park Cities PUMA; Florida
+795P200US1205710 -- Hillsborough County (Southwest)--Tampa City (South) PUMA; Florida
