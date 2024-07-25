@@ -1,5 +1,5 @@
 In this appendix, I present an exerpt of the rewards credit cards dataset, and describe in more detail how the static benefits were handled. 
-I also present tables of the spending budgets and income levels that were used for the sensitity analysis and Monte Carlo simulation. 
+I also present tables of the spending budgets and income levels that were used for the sensitivity analysis and Monte Carlo simulation. 
 
 Figure~\ref{fig:CreditCardsCSV} shows an exerpt of the credit cards dataset. 
 Note the that columns ``id'' contains duplicate numbers for:
@@ -10,7 +10,7 @@ Note the that columns ``id'' contains duplicate numbers for:
 \end{itemize}
 Having identical ``id'' numbers for these cards makes it easier to deal with these situations in the algorithm, after one of these cards is selected for the portfolio (namely by setting all values to zero of cards with the same ``id'').
 
-If a card has a travel or food credit, this credit was taken as a benefit at full value (column ``benefit\_credits''). Benefits that are not easily combined between different credit cards, such as a ``Global Entry / TSA Precheck'' credit, airport lounge access, and CLEAR membership credit, received a ``1'' flag in the columns ``benefit\_globalentry'', ``benefit\_lounge'', and ``benefit\_clear'', respectively (or ``0'' if not available). 
+If a card has a travel or food credit, this credit was taken as a benefit at full value (column ``benefit\_credits''). Benefits that are not easily combined between different credit cards, such as a ``Global Entry / TSA Precheck'' credit, airport lounge access, and CLEAR membership credit, received a ``1'' flag in the columns ``benefit\_globalentry,'' ``benefit\_lounge,'' and ``benefit\_clear,'' respectively (or ``0'' if not available). 
 This allows for an easy solution in the code to avoid counting these benefits multiple times, when in practice they can only be used once. 
 The \$100 ``Global Entry / TSA Precheck'' credit every five years is assumed as a \$20 yearly benefit. Airport lounge access is valued at \$40, which is approximately the value of two free meals with drinks. 
 The CLEAR membership credit is a \$189 value. 
@@ -19,8 +19,8 @@ Once a card is added to the portfolio in the recommendation algorithm, all these
 A boolean column ``cash\_only'' was added to indicate if the card is cashback only (TRUE), or if the card allows for higher-valued travel redemptions (FALSE).
 This could potentially be used to filter for certain user preferences.
 The columns ``base\_value'' and ``travel\_value'' were populated with the point valuations from \citet{nerdwallet:2024}, which are also shown in Table~\ref{tab:PointValues}.
-The final 36 columns (two for each spending category) contain the point multipliers and their limits (``\ldots\_cap''), sourced from the website \url{https://www.allcards.com} as well as the bank's websites. 
-All these credit card data were manually recorded in a Google Sheet and finally saved to the file \texttt{CreditCards.csv}. 
+The final 36 columns (two for each spending category) contain the point multipliers and their limits (``\ldots\_cap''), sourced from the website \url{https://www.allcards.com}, as well as from the bank's websites. 
+All these credit card data were manually recorded in a Google Sheet, and finally saved to the file \texttt{CreditCards.csv}. 
 
 \begin{landscape}
     \begin{figure}[t!h]
@@ -36,7 +36,7 @@ All these credit card data were manually recorded in a Google Sheet and finally 
 \input{../Tables/PointValues.tex}
 
 Table~\ref{tab:BudgetExtended} shows how the mapping between credit card categories and the items from the CES was performed, for the average consumer in 2022 with an income (before taxes) of \$94,003.
-Finally, Table~\ref{tab:BudgetIncome} shows the credit card spending budgets (as percentages of gross income), separated by income bins. 
+Finally, Table~\ref{tab:BudgetIncome} shows the credit card spending budgets (as percentages of gross income), separated by income level. 
 
 \begin{landscape}
     % Table of average Credit Card Budget from the 2022 BLS Consumer Expenditure Survey    

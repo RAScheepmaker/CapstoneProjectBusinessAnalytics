@@ -1,8 +1,8 @@
 \section{Results}   \label{sec:Results}
 
-In this section, I first present the algorithm I developed, to return the optimal credit card portfolio, given a set of user variables and card parameters.
+In this section, I first present the algorithm I developed to return the optimal credit card portfolio, given a set of user variables and card parameters.
 I then describe the results of a sensitivity analysis and Monte Carlo simulation that show how the return on spend and marginal benefit depend on the user variables.
-Finally, I will describe the interactive \sR\ \textsf{Shiny} app that is available online for people to play with and to get a recommended credit card portfolio tailored to their personal preferences. 
+Finally, I will describe the interactive \sR\ \textsf{Shiny} app that is available online for people to play with, and to get a recommended credit card portfolio tailored to their personal preferences. 
 
 \subsection{Portfolio Recommendation Algorithm}
 
@@ -15,7 +15,7 @@ The full code of both these functions is presented in the Code Appendix on page~
     \begin{center}
     \includegraphics[width=0.6\textwidth]{../Figures/Waterfall_avg_8_0_0.pdf}
     \includegraphics[width=0.6\textwidth]{../Figures/Waterfall_avg_8_05_05.pdf}
-    \caption{Waterfall-style summary of two recommended portfolios, for different user preferences. Both figures returned the best 8 cards ($K=8$) for the budget of the average consumer (income $=$ avg). The first card is on the left and the bars indicate the marginal benefit of adding each additional card. The top panel user has a cashback preference and uses no static benefits ($\eta$ and $\theta$ both equal 0). The bottom panel user transfers half the points to travel partners ($\eta = 0.5$) and uses half of each card's benefits ($\theta = 0.5$).}
+    \caption{Waterfall-style summary of two recommended portfolios, for different user preferences. Both figures returned the best 8 cards ($K=8$) for the budget of the average consumer (income $=$ avg). The first card is on the left, and the bars indicate the marginal benefit of adding each additional card. The user in the top panel has a cashback preference, and uses no static benefits ($\eta$ and $\theta$ both equal 0). The user in the bottom panel transfers half the points to travel partners ($\eta = 0.5$) and uses half of each card's benefits ($\theta = 0.5$).}
     \label{fig:Waterfall}
     \end{center}
 \end{figure}
@@ -64,6 +64,7 @@ There seems to be some evidence that the highest three income levels (above $\$1
     \end{center}
 \end{figure}
 
+\clearpage
 Figures \ref{fig:ROSvsKvsIncome_0_0}, \ref{fig:ROSvsKvsIncome_05_05}, and \ref{fig:ROSvsKvsIncome_1_1} show the total return on spend versus the number of cards, for the same choice of $(\eta, \theta)$ as the previous three figures. 
 These figures show that ROS converges to $\sim3.2$ percent for cashback-oriented users, regardless of income level (Fig.~\ref{fig:ROSvsKvsIncome_0_0}).
 Once travel transfer partners and benefits are being used, Figs.~\ref{fig:ROSvsKvsIncome_05_05} and~\ref{fig:ROSvsKvsIncome_1_1} show that there is more variation among different income levels. 
@@ -96,6 +97,7 @@ Figure~\ref{fig:ROSvsKvsIncome_1_1} also shows that 5.5--6.5 percent is roughly 
     \end{center}
 \end{figure}
 
+\clearpage
 Figure~\ref{fig:NBvsIncome} shows the range in total net benefit (in dollars) versus income.  
 This range lies between $\sim\$700$--$\$1200$ for the lowest incomes, and increases all the way up to $\sim\$2000$--$\$5000$ for incomes above \$300k.
 
@@ -107,13 +109,12 @@ This range lies between $\sim\$700$--$\$1200$ for the lowest incomes, and increa
     \end{center}
 \end{figure}
 
-\clearpage
 \subsection{Monte Carlo Simulation}
 
 Above we have seen how income and user preferences impact the expected return on spend from rewards credit cards.
-Income affects these results in two ways, as can be seen from Table~\ref{tab:BudgetIncome} in the Data Appendix.
-First of all, total spend scales with income; higher incomes can spend more on credit cards, although the total spend as a fraction of income goes down (i.e., higher incomes can put more money toward savings and housing, which does not end up on credit cards).
-Second, with changing incomes there are also shifts in the spending budgets; essential goods like groceries and gas form a much larger part of the budget for lower incomes, compared to higher incomes. 
+Income affected these results in two ways, as can also be seen from Table~\ref{tab:BudgetIncome} in the Data Appendix.
+First of all, total spend scales with income; people with higher incomes will spend more on credit cards, although the total spend as a fraction of income goes down (i.e., with increasing income, people put a fraction of the increase toward savings and housing, which does not end up on credit cards).
+Second, with changing income there are also shifts in the spending budgets; essential goods like groceries and gas form a much larger part of the budget for lower incomes, compared to higher incomes. 
 
 To represent more accurately how these patterns affect the benefits of rewards credit cards for a large group of users, I performed a Monte Carlo simulation using 100,000 samples. 
 The family income distribution of 57,005 Floridians was used, as described in Sect.~\ref{sec:Data} and presented in Fig.~\ref{fig:IncomeDistribution}.
@@ -143,22 +144,6 @@ The distribution approximates a lognormal with a mode at 3.55~percent, while the
 
 Figure~\ref{fig:MC_ROS_vs_K} shows a boxplot of the return on spend versus the number of cards, which confirms the earlier observations that marginal benefit diminishes strongly after four or five cards.
 
-\begin{figure}[t!bh]
-    \begin{center}
-    \includegraphics[width=0.6\textwidth]{../Figures/MC_ROS_vs_Income.pdf}
-    \caption{Smoothed density scatterplot of return on spend versus income, for all 100,000 simulated portfolios.}
-    \label{fig:MC_ROS_vs_Income}
-    \end{center}
-\end{figure}
-
-\begin{figure}[t!bh]
-    \begin{center}
-    \includegraphics[width=0.6\textwidth]{../Figures/TravelDiningFraction.pdf}
-    \caption{Fraction of total credit card spend going toward travel, dining, and groceries, for the average incomes from the BLS CES data (mapped to the credit card spending categories).}
-    \label{fig:TravelDiningFraction}
-    \end{center}
-\end{figure}
-
 Using a logarithmic scale for income, Fig.~\ref{fig:MC_ROS_vs_Income} shows a smoothed density scatterplot of all 100,000 simulated portfolios.  
 This shows where the highest density of our ``observations'' are, as well as how ROS varies with income. 
 Per income, the vertical spread in density is caused by the random sampling of $K$ (number of cards), $\eta$ (use of transfer partners), and $\theta$ (use of benefits).
@@ -170,13 +155,29 @@ Travel, on the other hand, takes up a larger fraction of the budget for higher i
 Not surprisingly, in our credit cards dataset we find some of the highest point multipliers on the travel categories, usually on cards with the highest annual fees, such as the American Express Platinum and the Chase Sapphire Reserve. 
 High-income individuals can more easily justify these high annual fees, especially since they also have the spending behavior that matches well with the rewards categories of these cards, leading to above-average benefits.   
 
+\begin{figure}[t!h]
+    \begin{center}
+    \includegraphics[width=0.6\textwidth]{../Figures/MC_ROS_vs_Income.pdf}
+    \caption{Smoothed density scatterplot of return on spend versus income, for all 100,000 simulated portfolios.}
+    \label{fig:MC_ROS_vs_Income}
+    \end{center}
+\end{figure}
+
+\begin{figure}[t!h]
+    \begin{center}
+    \includegraphics[width=0.6\textwidth]{../Figures/TravelDiningFraction.pdf}
+    \caption{Fraction of total credit card spend going toward travel, dining, and groceries, for the average incomes from the BLS CES data (mapped to the credit card spending categories).}
+    \label{fig:TravelDiningFraction}
+    \end{center}
+\end{figure}
+
 Finally, the results of the Monte Carlo simulation can be used to show how often a specific credit card ends up in a recommended portfolio. 
 Figure~\ref{fig:MC_Popularity_100k} shows the top 10 most recommended cards. 
 The Amazon Prime card and the American Express Blue Cash Preferred are the two most recommended cards, followed closely by the Wells Fargo Autograph.
 
 \begin{figure}[t!bh]
     \begin{center}
-    \includegraphics[width=0.7\textwidth]{../Figures/MC_Popularity_M100k.pdf}
+    \includegraphics[width=0.6\textwidth]{../Figures/MC_Popularity_M100k.pdf}
     \caption{Top 10 most recommended credit cards from the Monte Carlo simulation.}
     \label{fig:MC_Popularity_100k}
     \end{center}
@@ -190,7 +191,7 @@ Above we have seen how credit card rewards can benefit users with average income
 This is why I have also developed an \sR\ \textsf{Shiny} app that will return the optimal portfolio for a user's personal preferences and individual budget.
 
 A screenshot of the current version of the app is shown in Fig.~\ref{fig:REMCCO}, and the app can be accessed online at \url{https://remcoscheepmaker.shinyapps.io/ReMCCO/}.%
-\footnote{The working title of the app is ``ReMCCO'', which stands for Recommend Me Credit Cards Optimally.}
+\footnote{The working title of the app is ``ReMCCO,'' which stands for Recommend Me Credit Cards Optimally.}
 Every \textsf{Shiny} app consists of a user interface and a server function. 
 The server function makes use of exactly the same \texttt{get\_budget()} and \texttt{get\_portfolio()} functions as the rest of this project (presented in the Code Appendix), so the underlying algorithm works the same (although the app rounds the budget to the nearest dollar, which explains small differences between Figs.~\ref{fig:Waterfall} and \ref{fig:REMCCO}).
 

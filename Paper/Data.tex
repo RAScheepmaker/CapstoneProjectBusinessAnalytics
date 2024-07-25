@@ -13,12 +13,12 @@ This resulted in a list of 28 unique credit cards.
 However, some of the cards have a ``custom'' bonus reward category that can be chosen by the user (e.g. 5x points on groceries, or gas, or home improvement up to \$6000 per year). 
 These cards were treated as a separate credit card for each bonus category, bringing our total number of cards to 38. 
 
-I ignored credit cards that are dedicated to users of very specific stores, hotels, or airlines, as well as cards with rather exotic, or variable, reward categories (such as ``3x points on all mobile wallet payments'', or ``5x points on quarterly changing categories''), since these categories are impossible to map to our budget categories that will be discussed in the next section. 
+I ignored credit cards that are dedicated to users of very specific stores, hotels, or airlines, as well as cards with rather exotic, or variable, reward categories (such as ``3x points on all mobile wallet payments,'' or ``5x points on quarterly changing categories''), since these categories are impossible to map to our budget categories that will be discussed in the next section. 
 The results on total benefits should therefore be considered \emph{lower limits}, as there are many cards that can bring additional benefits to loyal users of certain brands.
  
 A list of 18 common card spending categories was taken from the website cardpointers.com,%
 \footnote{\url{https://www.cardpointers.com/app/} (accessed between June 3--9, 2024).}
-with the modification of removing ``warehouse clubs'' and ``ride sharing'', and adding ``streaming'' and ``travel (other)'', to facilitate a mapping of all the items on our budget to a spending category (see Sect.~\ref{subsec:UserData}). The final list of all the categories can be found in the first column of Table~\ref{tab:BudgetExtended} in the Data Appendix.
+with the modification of removing ``warehouse clubs'' and ``ride sharing,'' and adding ``streaming'' and ``travel (other),'' to facilitate a mapping of all the items on our budget to a spending category (see Sect.~\ref{subsec:UserData}). The final list of all the categories can be found in the first column of Table~\ref{tab:BudgetExtended} in the Data Appendix.
 
 For the base and travel values of the credit card points, I used the table from the \citet{nerdwallet:2024} website. 
 These values are shown in Table~\ref{tab:PointValues} in the Data Appendix and will be used for the sensitivity analysis and Monte Carlo simulation.
@@ -44,7 +44,7 @@ The remaining CES items were then mapped to the credit card spending categories 
 The CES also provides expenditures separated by nine income levels. 
 I have repeated the above construction of the average budget also for these nine income bins separately, and saved the results in the file \texttt{BudgetIncome.csv}. The percentages spend per credit card category are also shown in Table~\ref{tab:BudgetIncome} in the Data Appendix.
 For a given user's income (before taxes), the corresponding income bin from this table is used to calculate the average budget, namely by multiplying the gross income by the percentage spend in each category. 
-Our algorithm will then predict the total credit cards benefit as a function of income, as well as $\eta$, $\theta$, and the number of credit cards $K$ (see Sect.~\ref{sec:Specification}). 
+The algorithm will then predict the total credit cards benefit as a function of this income, as well as $\eta$, $\theta$, and the number of credit cards $K$ (see Sect.~\ref{sec:Specification}). 
 
 \begin{figure}[t!h]
     \begin{center}
@@ -57,6 +57,6 @@ Our algorithm will then predict the total credit cards benefit as a function of 
 A Monte Carlo simulation should give a reasonable estimate of the average net benefit and standard deviation for Americans who use an optimized credit card portfolio. 
 For this simulation we need to sample (with replacement) income, $\eta$, $\theta$, and $K$ from realistic distributions. 
 For the income distribution I used 2022 ``Family income'' (variable FINCP) from the BLS American Community Survey (ACS) Microdata tables, selecting all counties in Florida (resulting in 57,005 individual incomes).%
-\footnote{\url{https://data.census.gov/mdat/\#/search?ds=ACSPUMS1Y2022} (accessed June 25,2024).}
+\footnote{\url{https://data.census.gov/mdat/\#/search?ds=ACSPUMS1Y2022} (accessed June 25, 2024).}
 This income distribution is shown in Fig.~\ref{fig:IncomeDistribution} and approximates a lognormal distribution.
 User preferences $\eta$ and $\theta$ are sampled from a uniform distribution between 0--1, and $K$ is sampled from a uniform distribution between 1--8.
