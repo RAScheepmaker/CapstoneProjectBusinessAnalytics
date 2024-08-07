@@ -1,9 +1,11 @@
+<img src="Misc/ReMCCO.png" width="800"/>
+
 # Selecting the Optimal Credit Card Portfolio
 
 Author: Remco A. Scheepmaker, Ph.D.
-Date: July 2024
 
-To receive my (second) Masters degree in Business Analytics from the University of Central Florida, I did my Capstone Project on rewards credit cards. 
+For my (second) Masters degree in Business Analytics from the University of Central Florida, I developed this Capstone Project on rewards credit cards, over the course of 11 weeks in the summer of 2024.
+
 I developed an optimization algorithm that can be applied at scale to a large selection of credit cards, and to different types of consumers. 
 In this [paper](RScheepmakerPaper.pdf) I present this algorithm, code it in `R`, and use it to model 'optimal' portfolios of rewards credit cards for various combinations of user preferences and spending characteristics. 
 I then study the properties of these modeled portfolios, by combining data from the Bureau of Labor Statistics (BLS) on income and spending with data on credit card reward multipliers and values. 
@@ -24,5 +26,3 @@ from the Project folder.
 
 The final paper will appear 
 in the Project folder as [`RScheepmakerPaper.pdf`](RScheepmakerPaper.pdf)
-
-<img src="Misc/ReMCCO.png" width="800"/>
