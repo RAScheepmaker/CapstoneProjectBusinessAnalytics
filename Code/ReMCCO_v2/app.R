@@ -1,8 +1,6 @@
 # ################################################
-# ECO 6936 - Capstone in Business Analytics II
-#
-# Remco A. Scheepmaker, Ph.D. 
-# July 4, 2024
+# Author: Remco A. Scheepmaker, Ph.D. 
+# Date: September 11, 2024
 #
 # Script:   app.R
 #
@@ -48,30 +46,64 @@ ui <- page_fillable(
 
     # Sidebar with a slider input for number of cards 
     layout_columns(
-        card(card_header("Preferences"),
-            sliderInput(inputId = "K",
-                        "Number of Cards:",
-                        min = 1,
-                        max = 9,
-                        value = 4),
+        #card(card_header("Settings"),
+             accordion(
+               accordion_panel(
+                 "Preferences",
+                    sliderInput(inputId = "K",
+                    "Number of Cards:", 
+                    min = 1, 
+                    max = 9, 
+                    value = 4),
             
-            sliderInput(inputId = "eta",
-                        "Use of Transfer Partners [%]:",
-                        min = 0,
-                        max = 100,
-                        value = 50),
+                    sliderInput(inputId = "eta",
+                    "Use of Transfer Partners [%]:",
+                    min = 0,
+                    max = 100,
+                    value = 50),
 
-            sliderInput(inputId = "theta",
-                        "Use of Benefits [%]:",
-                        min = 0,
-                        max = 100,
-                        value = 50),
-          
-          # Filter for Banks
-          checkboxGroupInput(inputId = "banks", label = "Banks to Include:",
-                             choices = banks, selected = banks)),
-          
-        card(card_header("Budget"),
+                    sliderInput(inputId = "theta",
+                    "Use of Benefits [%]:",
+                    min = 0,
+                    max = 100,
+                    value = 50),
+               ),
+             
+               # Filter for Banks
+               accordion_panel(
+                 "Banks",
+                 checkboxGroupInput(inputId = "banks", label = "Consider cards from:",
+                             choices = banks, selected = banks)
+            ),
+            
+            # Point values, both minimum (basic cash back) and maximum (transfer partners) 
+            accordion_panel(
+              "Travel point/mile value (cpp)",
+              numericInput(inputId = "travel_value_amex", label = "Amex",
+                                 value = 2.0, min = 1.0),
+              
+              numericInput(inputId = "travel_value_boa", label = "BoA",
+                           value = 1.0, min = 1.0),
+              
+              numericInput(inputId = "travel_value_capone", label = "CapOne",
+                           value = 1.7, min = 1.0),
+              
+              numericInput(inputId = "travel_value_chase", label = "Chase",
+                           value = 2.6, min = 1.0),
+              
+              numericInput(inputId = "travel_value_citi", label = "Citi",
+                           value = 1.5, min = 1.0),
+              
+              numericInput(inputId = "travel_value_usbank", label = "US Bank",
+                           value = 1.0, min = 1.0),
+              
+              numericInput(inputId = "travel_value_wellsfargo", label = "Wells Fargo",
+                           value = 1.5, min = 1.0)
+            )
+            
+        ),
+        
+      card(card_header("Budget"),
             sliderInput(inputId = "income",
                         "Average Budget Annual Income [$]:",
                         min = 15000,
@@ -113,6 +145,35 @@ ui <- page_fillable(
 
 server <- function(input, output) {
 
+    # Update travel point values
+    for (b in 1:length(banks)) {
+      cbank <- banks[b]
+      #("Amex", "BoA", "CapOne", "Chase", "Citi", "US Bank", "Wells Fargo")
+      if (cbank == "Amex") { 
+        cards_data[(cards_data$bank == cbank & cards_data$cash_only == FALSE), 
+                   travel_value] <- input$travel_value_amex
+      } else if (cbank == "BoA") { 
+        cards_data[(cards_data$bank == cbank & cards_data$cash_only == FALSE), 
+                   travel_value] <- input$travel_value_boa
+      } else if (cbank == "CapOne") { 
+        cards_data[(cards_data$bank == cbank & cards_data$cash_only == FALSE), 
+                   travel_value] <- input$travel_value_capone
+      } else if (cbank == "Chase") { 
+        cards_data[(cards_data$bank == cbank & cards_data$cash_only == FALSE), 
+                   travel_value] <- input$travel_value_chase
+      } else if (cbank == "Citi") { 
+        cards_data[(cards_data$bank == cbank & cards_data$cash_only == FALSE), 
+                   travel_value] <- input$travel_value_citi
+      } else if (cbank == "US Bank") { 
+        cards_data[(cards_data$bank == cbank & cards_data$cash_only == FALSE), 
+                   travel_value] <- input$travel_value_usbank
+      } else if (cbank == "Wells Fargo") { 
+        cards_data[(cards_data$bank == cbank & cards_data$cash_only == FALSE), 
+                   travel_value] <- input$travel_value_wellsfargo
+      }
+    }
+    
+  
     budget <- reactive({
       #get_budget(input$income, budget_data)
       c("everything_else" = input$everything_else, 
