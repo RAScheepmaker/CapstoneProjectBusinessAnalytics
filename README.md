@@ -13,7 +13,7 @@ By performing a sensitivity analysis, I find that spending on four to six credit
 From a Monte Carlo simulation I find that the average return on spend (ROS) is 3.80 percent, with a standard deviation of 0.80 percent. 
 In terms of ROS, the benefit of using credit cards can be significantly higher (up to 6.5 percent) for people who do not spend a lot but make full use of static benefits, such as travel credits and airport lounge access, or for people who spend above average on travel, since the travel categories have the highest (uncapped) point multipliers. 
 Finally, I present a `Shiny` app that I developed in `R`, to serve as an
-online tool that people can use to get a recommended credit card portfolio, based on their personal preferences and spending budget. 
+[online tool](https://remcoscheepmaker.shinyapps.io/ReMCCO/) that people can use to get a recommended credit card portfolio, based on their personal preferences and spending budget. 
 This app can benefit many sophisticated credit card users who would like to stretch their budgets, travel more, or who simply enjoy optimizing their personal finances.
 
 In order to run all the codes and 
